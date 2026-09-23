@@ -230,6 +230,6 @@ TouchInfo is currently in the **design and feasibility phase**. The mock-ups des
 
 ## Team
 
-- Lyanh Renkin
-- Evangéline Vuchot
-- Loane Gosselin
+- [Lyanh Renkin](https://github.com/renlahh)
+- [Evangéline Vuchot](https://github.com/EvangelineVuchot)
+- [Loane Gosselin](https://github.com/Loanegosselin)
