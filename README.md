@@ -1,8 +1,8 @@
-# TactiBrief
+# TouchInfo
 
 > A tactile and audio widget that makes everyday and school information faster and easier to access for blind and visually impaired users.
 
-TactiBrief is a browser-based accessibility project powered by the DotPad tactile display. It transforms selected digital information into simple tactile pictograms, with optional audio feedback when the user needs more detail.
+TouchInfo is a browser-based accessibility project powered by the DotPad tactile display. It transforms selected digital information into simple tactile pictograms, with optional audio feedback when the user needs more detail.
 
 The goal is to offer the tactile equivalent of a smartphone widget: essential information available at a glance becomes available **at the fingertips**.
 
@@ -10,12 +10,12 @@ The goal is to offer the tactile equivalent of a smartphone widget: essential in
 
 Smartphones provide quick visual summaries for notifications, calendars, weather forecasts and news. These interfaces are not directly accessible to blind users, and existing alternatives may require several navigation steps, continuous audio playback or knowledge of Braille.
 
-TactiBrief provides a complementary physical interface that can be placed on a desk at school, at work or at home. The system simplifies information before displaying it on the DotPad:
+TouchInfo provides a complementary physical interface that can be placed on a desk at school, at work or at home. The system simplifies information before displaying it on the DotPad:
 
 ```text
 Web application  ->  Bluetooth Low Energy  ->  DotPad  ->  Tactile pictograms
-                                              |
-                                              ->  Optional audio feedback
+                                                      |
+                                                       ->  Optional audio feedback
 ```
 
 The interface is designed around four principles:
@@ -27,7 +27,7 @@ The interface is designed around four principles:
 
 ## Target users
 
-TactiBrief is designed for:
+TouchInfo is designed for:
 
 - blind and visually impaired users who want faster access to everyday information;
 - people who do not read Braille fluently and can benefit from simple tactile pictograms;
@@ -77,7 +77,7 @@ Long articles are condensed into a limited number of topic pictograms. The user 
 
 ### School notifications
 
-TactiBrief can simplify authorized alerts from a school platform or calendar. Possible use cases include:
+TouchInfo can simplify authorized alerts from a school platform or calendar. Possible use cases include:
 
 - classroom changes;
 - cancelled or delayed lectures;
@@ -108,7 +108,7 @@ Before leaving, the user selects the weather category. The DotPad displays a sun
 
 ## Technical approach
 
-TactiBrief is designed as a web application rather than a native Android or iOS application.
+TouchInfo is designed as a web application rather than a native Android or iOS application.
 
 ### Proposed stack
 
@@ -147,7 +147,7 @@ This approach prevents information overload and keeps the tactile interface quic
 ## Planned project structure
 
 ```text
-TactiBrief/
+TouchInfo/
 ├── public/                 # Static assets
 ├── src/
 │   ├── api/                # Calendar, weather, news and school connectors
@@ -167,42 +167,6 @@ TactiBrief/
 
 The repository structure may evolve during the proof-of-concept phase.
 
-## Getting started
-
-The following commands are provisional and should be updated once the web framework and scripts have been finalized.
-
-### Prerequisites
-
-- Node.js and npm
-- A browser compatible with the selected Bluetooth workflow
-- Access to the DotPad SDK, simulator or development kit
-- API credentials for the enabled services
-
-### Installation
-
-```bash
-git clone <repository-url>
-cd TactiBrief
-npm install
-cp .env.example .env
-npm run dev
-```
-
-Open the local address displayed by the development server.
-
-### Environment variables
-
-Example configuration:
-
-```env
-WEATHER_API_KEY=
-NEWS_API_KEY=
-CALENDAR_CLIENT_ID=
-SCHOOL_API_URL=
-SCHOOL_API_TOKEN=
-```
-
-Do not commit private API keys or access tokens.
 
 ## Accessibility guidelines
 
@@ -249,7 +213,7 @@ Sessions with blind and visually impaired participants should evaluate:
 - [x] Define the project concept and target users
 - [x] Create interface mock-ups for weather, calendar, news and notifications
 - [x] Add a school-notification use case
-- [ ] Complete the state of the art
+- [x] Complete the state of the art
 - [ ] Confirm access to the DotPad SDK and simulator
 - [ ] Select the web framework and initialize the application
 - [ ] Implement the tactile pictogram data model
@@ -262,29 +226,10 @@ Sessions with blind and visually impaired participants should evaluate:
 
 ## Project status
 
-TactiBrief is currently in the **design and feasibility phase**. The mock-ups describe the intended user experience, but the technical implementation and external integrations still need to be validated with the DotPad development environment.
+TouchInfo is currently in the **design and feasibility phase**. The mock-ups describe the intended user experience, but the technical implementation and external integrations still need to be validated with the DotPad development environment.
 
 ## Team
 
 - Lyanh Renkin
 - Evangéline Vuchot
 - Loane Gosselin
-
-## Contributing
-
-This is currently a student project. Contributions, accessibility feedback and testing suggestions are welcome.
-
-To propose a change:
-
-1. Create a branch.
-2. Make and test the modification.
-3. Open a pull request with a clear description.
-4. Explain any impact on tactile or audio accessibility.
-
-## License
-
-A license has not yet been selected. Add a `LICENSE` file before distributing or reusing the project publicly.
-
-## Acknowledgements
-
-TactiBrief is designed to work with the DotPad tactile platform and its development tools. DotPad is the target hardware platform; TactiBrief is the name of this student project and is not presented as an official DotPad product.
