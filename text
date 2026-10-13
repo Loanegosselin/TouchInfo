@@ -1,0 +1,68 @@
+tactibrief/
+├── public/
+│   ├── icons/
+│   └── sounds/
+│
+├── src/
+│   ├── api/
+│   │   ├── calendarApi.js
+│   │   ├── newsApi.js
+│   │   ├── schoolApi.js
+│   │   └── weatherApi.js
+│   │
+│   ├── bluetooth/
+│   │   ├── dotPadSdk.js
+│   │   ├── dotPadService.js
+│   │   └── dotPadEvents.js
+│   │
+│   ├── components/
+│   │   ├── AudioButton.jsx
+│   │   ├── CategoryButton.jsx
+│   │   ├── ConnectionStatus.jsx
+│   │   ├── DotPadPreview.jsx
+│   │   └── NavigationButtons.jsx
+│   │
+│   ├── converters/
+│   │   ├── calendarConverter.js
+│   │   ├── newsConverter.js
+│   │   ├── notificationConverter.js
+│   │   ├── schoolConverter.js
+│   │   └── weatherConverter.js
+│   │
+│   ├── data/
+│   │   ├── mockCalendar.js
+│   │   ├── mockNews.js
+│   │   ├── mockNotifications.js
+│   │   ├── mockSchoolNotifications.js
+│   │   └── mockWeather.js
+│   │
+│   ├── features/
+│   │   ├── calendar/
+│   │   ├── news/
+│   │   ├── notifications/
+│   │   ├── school/
+│   │   └── weather/
+│   │
+│   ├── pictograms/
+│   │   ├── pictogramLibrary.js
+│   │   ├── tactilePatterns.js
+│   │   └── patternComposer.js
+│   │
+│   ├── speech/
+│   │   └── speechService.js
+│   │
+│   ├── utils/
+│   │   ├── dateUtils.js
+│   │   ├── matrixUtils.js
+│   │   └── validationUtils.js
+│   │
+│   ├── App.jsx
+│   ├── App.css
+│   └── main.jsx
+│
+├── tests/
+├── .env.example
+├── .gitignore
+├── package.json
+├── vite.config.js
+└── README.md
