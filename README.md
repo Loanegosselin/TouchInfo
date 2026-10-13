@@ -148,20 +148,72 @@ This approach prevents information overload and keeps the tactile interface quic
 
 ```text
 TouchInfo/
-├── public/                 # Static assets
+├── public/
+│   ├── icons/
+│   └── sounds/
+│
 ├── src/
-│   ├── api/                # Calendar, weather, news and school connectors
-│   ├── bluetooth/          # BLE and Web Bluetooth communication
-│   ├── components/         # Web interface components
-│   ├── converters/         # Data-to-pictogram conversion rules
-│   ├── dotpad/             # DotPad SDK integration
-│   ├── speech/             # Audio and text-to-speech functions
-│   ├── assets/             # Pictograms and interface assets
-│   └── app/                # Main application logic
-├── tests/                  # Unit and integration tests
-├── docs/                   # Research, mock-ups and project documentation
-├── .env.example            # Example environment variables
+│   ├── api/
+│   │   ├── calendarApi.js
+│   │   ├── newsApi.js
+│   │   ├── schoolApi.js
+│   │   └── weatherApi.js
+│   │
+│   ├── bluetooth/
+│   │   ├── dotPadSdk.js
+│   │   ├── dotPadService.js
+│   │   └── dotPadEvents.js
+│   │
+│   ├── components/
+│   │   ├── AudioButton.jsx
+│   │   ├── CategoryButton.jsx
+│   │   ├── ConnectionStatus.jsx
+│   │   ├── DotPadPreview.jsx
+│   │   └── NavigationButtons.jsx
+│   │
+│   ├── converters/
+│   │   ├── calendarConverter.js
+│   │   ├── newsConverter.js
+│   │   ├── notificationConverter.js
+│   │   ├── schoolConverter.js
+│   │   └── weatherConverter.js
+│   │
+│   ├── data/
+│   │   ├── mockCalendar.js
+│   │   ├── mockNews.js
+│   │   ├── mockNotifications.js
+│   │   ├── mockSchoolNotifications.js
+│   │   └── mockWeather.js
+│   │
+│   ├── features/
+│   │   ├── calendar/
+│   │   ├── news/
+│   │   ├── notifications/
+│   │   ├── school/
+│   │   └── weather/
+│   │
+│   ├── pictograms/
+│   │   ├── pictogramLibrary.js
+│   │   ├── tactilePatterns.js
+│   │   └── patternComposer.js
+│   │
+│   ├── speech/
+│   │   └── speechService.js
+│   │
+│   ├── utils/
+│   │   ├── dateUtils.js
+│   │   ├── matrixUtils.js
+│   │   └── validationUtils.js
+│   │
+│   ├── App.jsx
+│   ├── App.css
+│   └── main.jsx
+│
+├── tests/
+├── .env.example
+├── .gitignore
 ├── package.json
+├── vite.config.js
 └── README.md
 ```
 
