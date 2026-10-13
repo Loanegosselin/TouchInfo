@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A browser-based virtual DotPad grid for designing tactile pictograms." />
+  <title>TouchInfo | Virtual DotPad</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#simulator">Skip to simulator</a>
+
+  <header class="site-header">
+    <div>
+      <p class="eyebrow">TOUCHINFO PROTOTYPE</p>
+      <h1>Virtual DotPad</h1>
+      <p class="subtitle">Draw, preview and export simple tactile pictograms directly in the browser.</p>
+    </div>
+    <span class="status" id="status" role="status" aria-live="polite">Ready</span>
+  </header>
+
+  <main id="simulator" class="layout">
+    <aside class="panel controls" aria-label="Simulator controls">
+      <section>
+        <h2>Grid</h2>
+        <div class="field-grid">
+          <label>Columns
+            <input id="columns" type="number" min="8" max="80" value="40" />
+          </label>
+          <label>Rows
+            <input id="rows" type="number" min="8" max="60" value="24" />
+          </label>
+        </div>
+        <button id="resize" class="button secondary">Resize grid</button>
+      </section>
+
+      <section>
+        <h2>Drawing tools</h2>
+        <div class="tool-group" role="group" aria-label="Drawing mode">
+          <button id="drawMode" class="button active" aria-pressed="true">Raise dots</button>
+          <button id="eraseMode" class="button secondary" aria-pressed="false">Lower dots</button>
+        </div>
+        <label class="range-label" for="brushSize">Brush size <output id="brushOutput">1</output></label>
+        <input id="brushSize" type="range" min="1" max="4" value="1" />
+      </section>
+
+      <section>
+        <h2>Everyday examples</h2>
+        <div class="preset-grid">
+          <button class="preset" data-preset="weather">☀ Weather</button>
+          <button class="preset" data-preset="calendar">▣ Calendar</button>
+          <button class="preset" data-preset="notification">✉ Notification</button>
+          <button class="preset" data-preset="news">▤ News</button>
+          <button class="preset" data-preset="school">⌂ School alert</button>
+        </div>
+      </section>
+
+      <section>
+        <h2>Audio feedback</h2>
+        <label for="speechText">Spoken summary</label>
+        <textarea id="speechText" rows="3">Today, sunny, 24 degrees.</textarea>
+        <div class="tool-group">
+          <button id="speak" class="button">Play audio</button>
+          <button id="stopSpeech" class="button secondary">Stop</button>
+        </div>
+      </section>
+
+      <section>
+        <h2>Actions</h2>
+        <div class="action-grid">
+          <button id="clear" class="button danger">Clear</button>
+          <button id="invert" class="button secondary">Invert</button>
+          <button id="download" class="button secondary">Export JSON</button>
+          <label class="button secondary file-button">Import JSON
+            <input id="upload" type="file" accept="application/json" hidden />
+          </label>
+        </div>
+      </section>
+    </aside>
+
+    <section class="device-area" aria-label="Virtual DotPad preview">
+      <div class="device">
+        <div class="device-topbar">
+          <div>
+            <span class="device-label">DOTPAD PREVIEW</span>
+            <strong id="activePreset">Custom pictogram</strong>
+          </div>
+          <div class="connection"><span></span> Virtual mode</div>
+        </div>
+
+        <div class="screen-wrap">
+          <div
+            id="grid"
+            class="dot-grid"
+            role="grid"
+            aria-label="Interactive tactile dot grid. Use pointer input to draw, or use arrow keys to move and Space to toggle a dot."
+            tabindex="0"
+          ></div>
+        </div>
+
+        <div class="device-buttons" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="braille-line" aria-hidden="true"></div>
+      </div>
+
+      <div class="help-card">
+        <h2>How to use it</h2>
+        <ol>
+          <li>Choose an example or draw directly on the grid.</li>
+          <li>Keep shapes large, distinct and separated.</li>
+          <li>Add a short audio sentence for optional detail.</li>
+          <li>Export the dot matrix as JSON for future DotPad integration.</li>
+        </ol>
+        <p><strong>Keyboard:</strong> arrow keys move the cursor, Space toggles a dot, D selects draw mode and E selects erase mode.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Browser prototype only. This simulator does not communicate with physical DotPad hardware yet.
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
